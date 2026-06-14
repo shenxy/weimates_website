@@ -35,7 +35,8 @@
 }
 
 .tpl-weimates-customer-demo .cover-slide {
-  position: relative;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
   color: #fff;
   background: #071931;
@@ -298,6 +299,7 @@
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 26px;
   align-items: end;
+  align-content: center;
 }
 
 .tpl-weimates-customer-demo .interface-frame {
@@ -465,21 +467,23 @@
 }
 
 .tpl-weimates-customer-demo .cta-hero .primary-panel {
-  min-height: 220px;
+  min-height: 124px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .tpl-weimates-customer-demo .cta-steps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .tpl-weimates-customer-demo .cta-step {
   display: grid;
   grid-template-columns: 52px minmax(0, 1fr);
   gap: 16px;
-  padding: 22px 22px 24px;
+  padding: 18px 20px 20px;
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(8, 33, 77, 0.1);
@@ -500,8 +504,8 @@
 
 .tpl-weimates-customer-demo .cta-step strong {
   display: block;
-  margin-bottom: 8px;
-  font-size: 22px;
+  margin-bottom: 6px;
+  font-size: 20px;
   line-height: 1.35;
   color: var(--text-1);
 }
@@ -570,11 +574,8 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-top: 28px;
-  padding: 22px 28px;
-  border-radius: 26px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 76px;
+  padding: 0;
 }
 
 .tpl-weimates-customer-demo .contact-footer p {
