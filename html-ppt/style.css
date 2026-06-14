@@ -1,0 +1,583 @@
+.tpl-weimates-customer-demo {
+  --bg: #f3f7fc;
+  --bg-soft: #e9f0f8;
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-2: rgba(244, 248, 253, 0.96);
+  --border: rgba(8, 33, 77, 0.12);
+  --text-1: #09214d;
+  --text-2: #365172;
+  --text-3: #6c7f98;
+  --accent: #004098;
+  --accent-2: #1c6cdf;
+  --accent-3: #e60012;
+  --good: #1b8e5a;
+  --warn: #d97706;
+  --bad: #e60012;
+  --grad: linear-gradient(135deg, #08204b 0%, #004098 46%, #1b5fd1 100%);
+  --grad-soft: linear-gradient(135deg, rgba(0, 64, 152, 0.18), rgba(230, 0, 18, 0.08));
+  --radius: 26px;
+  --radius-lg: 34px;
+  --shadow: 0 26px 80px rgba(6, 30, 70, 0.13);
+  --font-sans: "Aptos", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-display: Georgia, "Times New Roman", "Songti SC", serif;
+}
+
+.tpl-weimates-customer-demo body {
+  margin: 0;
+}
+
+.tpl-weimates-customer-demo .slide {
+  padding: 72px 84px;
+  background:
+    radial-gradient(circle at top left, rgba(0, 64, 152, 0.08), transparent 24%),
+    linear-gradient(180deg, #f7fafe 0%, #eef4fb 100%);
+  color: var(--text-1);
+}
+
+.tpl-weimates-customer-demo .cover-slide {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: #071931;
+}
+
+.tpl-weimates-customer-demo .hero-media,
+.tpl-weimates-customer-demo .hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.tpl-weimates-customer-demo .hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tpl-weimates-customer-demo .hero-overlay {
+  background:
+    linear-gradient(100deg, rgba(6, 18, 45, 0.96) 0%, rgba(0, 44, 104, 0.84) 46%, rgba(0, 53, 117, 0.28) 82%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.6));
+}
+
+.tpl-weimates-customer-demo .brand-bar,
+.tpl-weimates-customer-demo .hero-copy,
+.tpl-weimates-customer-demo .metric-stack,
+.tpl-weimates-customer-demo .deck-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.tpl-weimates-customer-demo .brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tpl-weimates-customer-demo .brand-bar img,
+.tpl-weimates-customer-demo .contact-footer img {
+  width: 210px;
+  height: auto;
+}
+
+.tpl-weimates-customer-demo .brand-bar span {
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.tpl-weimates-customer-demo .hero-copy {
+  max-width: 760px;
+  margin-top: 92px;
+}
+
+.tpl-weimates-customer-demo .kicker {
+  color: var(--accent-3);
+  letter-spacing: 0.14em;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tpl-weimates-customer-demo .cover-slide .kicker,
+.tpl-weimates-customer-demo .cover-slide .lede,
+.tpl-weimates-customer-demo .cover-slide .deck-footer {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tpl-weimates-customer-demo .cover-slide .kicker,
+.tpl-weimates-customer-demo .cover-slide .h1,
+.tpl-weimates-customer-demo .cover-slide .lede,
+.tpl-weimates-customer-demo .cover-slide .brand-bar span,
+.tpl-weimates-customer-demo .cover-slide .metric-card strong,
+.tpl-weimates-customer-demo .cover-slide .metric-card p {
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.tpl-weimates-customer-demo .h1 {
+  margin: 12px 0 0;
+  font-family: var(--font-display);
+  font-size: 74px;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  color: inherit;
+}
+
+.tpl-weimates-customer-demo .h2 {
+  margin: 12px 0 0;
+  max-width: 11.5ch;
+  font-size: 48px;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--text-1);
+}
+
+.tpl-weimates-customer-demo .lede {
+  max-width: 45ch;
+  color: var(--text-2);
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+.tpl-weimates-customer-demo .cover-slide .lede {
+  margin-top: 22px;
+}
+
+.tpl-weimates-customer-demo .hero-pills {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.tpl-weimates-customer-demo .hero-pills span,
+.tpl-weimates-customer-demo .mini-label,
+.tpl-weimates-customer-demo .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tpl-weimates-customer-demo .mini-label,
+.tpl-weimates-customer-demo .eyebrow {
+  background: rgba(0, 64, 152, 0.08);
+  border-color: rgba(0, 64, 152, 0.12);
+  color: var(--accent);
+}
+
+.tpl-weimates-customer-demo .mini-label.good {
+  color: #1b8e5a;
+  background: rgba(27, 142, 90, 0.09);
+  border-color: rgba(27, 142, 90, 0.14);
+}
+
+.tpl-weimates-customer-demo .metric-stack {
+  position: absolute;
+  right: 84px;
+  bottom: 122px;
+  width: 360px;
+  display: grid;
+  gap: 16px;
+}
+
+.tpl-weimates-customer-demo .metric-card,
+.tpl-weimates-customer-demo .card,
+.tpl-weimates-customer-demo .advantage-card,
+.tpl-weimates-customer-demo .scenario-card,
+.tpl-weimates-customer-demo .cta-panel,
+.tpl-weimates-customer-demo .qr-card,
+.tpl-weimates-customer-demo .governance-aside {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.tpl-weimates-customer-demo .metric-card {
+  padding: 20px 22px;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+
+.tpl-weimates-customer-demo .metric-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.tpl-weimates-customer-demo .metric-card p,
+.tpl-weimates-customer-demo .advantage-card p,
+.tpl-weimates-customer-demo .scenario-card p,
+.tpl-weimates-customer-demo .governance-aside p,
+.tpl-weimates-customer-demo .cta-panel p,
+.tpl-weimates-customer-demo .qr-card p,
+.tpl-weimates-customer-demo figcaption {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.tpl-weimates-customer-demo .cover-slide .metric-card strong {
+  color: #ffffff;
+}
+
+.tpl-weimates-customer-demo .cover-slide .metric-card p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.tpl-weimates-customer-demo .deck-footer {
+  position: absolute;
+  inset: auto 84px 42px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+.tpl-weimates-customer-demo .cover-slide .deck-footer {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.tpl-weimates-customer-demo .positioning-grid,
+.tpl-weimates-customer-demo .contact-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.tpl-weimates-customer-demo .statement-card,
+.tpl-weimates-customer-demo .contrast-card,
+.tpl-weimates-customer-demo .governance-aside,
+.tpl-weimates-customer-demo .cta-panel {
+  padding: 28px 30px;
+}
+
+.tpl-weimates-customer-demo .contrast-card {
+  display: grid;
+  gap: 18px;
+}
+
+.tpl-weimates-customer-demo .quote-band {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 22px 26px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(0, 64, 152, 0.08), rgba(230, 0, 18, 0.06));
+}
+
+.tpl-weimates-customer-demo .quote-band span {
+  width: 6px;
+  align-self: stretch;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #004098, #e60012);
+}
+
+.tpl-weimates-customer-demo .quote-band p {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.55;
+  color: var(--text-1);
+}
+
+.tpl-weimates-customer-demo .interface-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 26px;
+  align-items: end;
+}
+
+.tpl-weimates-customer-demo .interface-frame {
+  margin: 0;
+  padding: 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  align-self: end;
+}
+
+.tpl-weimates-customer-demo .interface-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.tpl-weimates-customer-demo .interface-frame figcaption {
+  margin-top: 14px;
+}
+
+.tpl-weimates-customer-demo .annotation-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.tpl-weimates-customer-demo .annotation-card {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(8, 33, 77, 0.08);
+}
+
+.tpl-weimates-customer-demo .annotation-card span,
+.tpl-weimates-customer-demo .card-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--grad);
+  color: #fff;
+  font-weight: 800;
+}
+
+.tpl-weimates-customer-demo .annotation-card strong,
+.tpl-weimates-customer-demo .advantage-card h3,
+.tpl-weimates-customer-demo .scenario-card h3,
+.tpl-weimates-customer-demo .qr-card h3,
+.tpl-weimates-customer-demo .cta-panel h3,
+.tpl-weimates-customer-demo .contrast-card h3 {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 24px;
+  line-height: 1.28;
+  color: var(--text-1);
+}
+
+.tpl-weimates-customer-demo .annotation-card p,
+.tpl-weimates-customer-demo .contrast-card p {
+  margin: 0;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+.tpl-weimates-customer-demo .advantage-grid {
+  gap: 20px;
+}
+
+.tpl-weimates-customer-demo .advantage-card,
+.tpl-weimates-customer-demo .scenario-card {
+  padding: 26px;
+}
+
+.tpl-weimates-customer-demo .advantage-card .card-index {
+  margin-bottom: 18px;
+}
+
+.tpl-weimates-customer-demo .scenario-slide .h2 {
+  max-width: 13ch;
+}
+
+.tpl-weimates-customer-demo .scenario-grid {
+  gap: 18px;
+}
+
+.tpl-weimates-customer-demo .scenario-card {
+  min-height: 250px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 248, 252, 0.92)),
+    var(--grad-soft);
+}
+
+.tpl-weimates-customer-demo .governance-slide {
+  background:
+    radial-gradient(circle at top right, rgba(230, 0, 18, 0.08), transparent 22%),
+    linear-gradient(180deg, #f5f8fc 0%, #edf3fb 100%);
+}
+
+.tpl-weimates-customer-demo .governance-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 24px;
+}
+
+.tpl-weimates-customer-demo .governance-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.tpl-weimates-customer-demo .governance-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 18px;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(8, 33, 77, 0.08);
+}
+
+.tpl-weimates-customer-demo .governance-row span {
+  color: var(--accent-3);
+  font-weight: 800;
+}
+
+.tpl-weimates-customer-demo .governance-row strong {
+  color: var(--text-1);
+  line-height: 1.6;
+}
+
+.tpl-weimates-customer-demo .governance-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tpl-weimates-customer-demo .governance-aside .eyebrow {
+  display: block;
+  padding: 0 0 0 18px;
+  border: 0;
+  border-left: 4px solid var(--accent-3);
+  border-radius: 0;
+  background: transparent;
+  color: var(--text-1);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.tpl-weimates-customer-demo .cta-slide {
+  background:
+    radial-gradient(circle at top left, rgba(0, 64, 152, 0.08), transparent 24%),
+    linear-gradient(120deg, #f7fafe 0%, #eef4fb 64%, #f7fafe 100%);
+}
+
+.tpl-weimates-customer-demo .cta-hero {
+  display: block;
+}
+
+.tpl-weimates-customer-demo .cta-hero .primary-panel {
+  min-height: 220px;
+}
+
+.tpl-weimates-customer-demo .cta-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.tpl-weimates-customer-demo .cta-step {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 16px;
+  padding: 22px 22px 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(8, 33, 77, 0.1);
+  box-shadow: var(--shadow);
+}
+
+.tpl-weimates-customer-demo .cta-step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--grad);
+  color: #fff;
+  font-weight: 800;
+}
+
+.tpl-weimates-customer-demo .cta-step strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 22px;
+  line-height: 1.35;
+  color: var(--text-1);
+}
+
+.tpl-weimates-customer-demo .cta-step p {
+  margin: 0;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+.tpl-weimates-customer-demo .primary-panel {
+  background: var(--grad);
+  color: #fff;
+}
+
+.tpl-weimates-customer-demo .primary-panel .mini-label,
+.tpl-weimates-customer-demo .primary-panel p,
+.tpl-weimates-customer-demo .primary-panel h3 {
+  color: #fff;
+}
+
+.tpl-weimates-customer-demo .primary-panel .mini-label {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.tpl-weimates-customer-demo .contact-slide {
+  background:
+    linear-gradient(180deg, rgba(9, 33, 77, 0.96), rgba(11, 28, 62, 0.98)),
+    linear-gradient(180deg, #0b1f45, #0b1f45);
+  color: #fff;
+}
+
+.tpl-weimates-customer-demo .contact-slide .h2,
+.tpl-weimates-customer-demo .contact-slide .kicker,
+.tpl-weimates-customer-demo .contact-slide .deck-footer,
+.tpl-weimates-customer-demo .contact-slide .qr-card h3,
+.tpl-weimates-customer-demo .contact-slide .contact-footer strong,
+.tpl-weimates-customer-demo .contact-slide .contact-footer p {
+  color: #fff;
+}
+
+.tpl-weimates-customer-demo .contact-slide .qr-card {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 22px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.tpl-weimates-customer-demo .contact-slide .qr-card p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.tpl-weimates-customer-demo .qr-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.tpl-weimates-customer-demo .contact-footer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 22px 28px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tpl-weimates-customer-demo .contact-footer p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+}
