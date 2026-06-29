@@ -32,14 +32,3 @@
 #### Scenario: “平台定位”部分引入 AI Native 叙事
 - **WHEN** a visitor reads the positioning explanation
 - **THEN** the section makes clear that the platform supports the enterprise transition from using AI tools to building an AI Native digital employee system
-
-### Requirement: 实施过程 SHALL 支持分阶段交付
-首页封面与“平台定位”部分的刷新 SHALL 按两个阶段交付，以便先验证文案与信息结构，再进行视觉语言和动效系统的重构。
-
-#### Scenario: V1 限定在文案与信息结构调整
-- **WHEN** the first implementation pass is executed
-- **THEN** it updates the hero and positioning text and any minimal structure needed for the new wording without requiring a full visual redesign
-
-#### Scenario: V2 预留给视觉重构
-- **WHEN** the second implementation pass is executed
-- **THEN** it may redesign the hero and positioning visual presentation, including layout, graphic language, and motion hierarchy, while preserving the settled narrative
