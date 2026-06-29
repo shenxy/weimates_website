@@ -1,0 +1,21 @@
+schema: spec-driven
+
+context: |
+  语言：中文（简体）
+  请用简体中文撰写所有文档内容,但以下内容保留英文：
+  - 技术术语，如 "API"、"REST"、"GraphQL"
+  - 代码示例、文件路径、变量名、命令行内容
+
+rules:
+  proposal:
+    - Use Simplified Chinese for all prose.
+    - Keep the document concise and business-facing.
+  design:
+    - Use Simplified Chinese for all prose.
+    - Keep technical terms accurate; English terms may appear in parentheses when helpful.
+  tasks:
+    - Use Simplified Chinese for task descriptions.
+    - Preserve the required checkbox format exactly.
+  specs:
+    - Use Simplified Chinese for requirement and scenario descriptions.
+    - Preserve OpenSpec keywords and required structure exactly.

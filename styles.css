@@ -237,13 +237,13 @@ button {
 }
 
 .hero-copy {
-  max-width: 720px;
+  max-width: 820px;
 }
 
 .hero h1 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(56px, 8.8vw, 104px);
+  font-size: clamp(48px, 7.4vw, 88px);
   line-height: 0.94;
   letter-spacing: -0.03em;
 }
@@ -349,7 +349,7 @@ button {
 
 .intro-grid .section-title,
 .interface-intro .section-title {
-  max-width: 14ch;
+  max-width: 18ch;
 }
 
 .interface-section {
