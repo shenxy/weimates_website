@@ -147,7 +147,6 @@ button {
   opacity: 1;
 }
 
-.nav-cta,
 .button {
   display: inline-flex;
   align-items: center;
@@ -162,19 +161,11 @@ button {
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
-.nav-cta:hover,
-.nav-cta:focus-visible,
 .button:hover,
 .button:focus-visible {
   transform: translateY(-2px);
 }
 
-.site-header.is-solid .nav-cta {
-  border-color: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.site-header.is-solid-locked .nav-cta,
 .site-header.is-solid .nav-panel {
   border-color: rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
@@ -963,10 +954,6 @@ body.nav-open {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
-  }
-
-  .nav-cta {
-    display: none;
   }
 
   .hero {
