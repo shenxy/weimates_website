@@ -129,8 +129,8 @@ button {
   display: flex;
   align-items: center;
   justify-self: center;
-  gap: clamp(18px, 2.8vw, 34px);
-  padding: 12px 20px;
+  gap: clamp(14px, 2vw, 26px);
+  padding: 12px 18px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
@@ -675,6 +675,89 @@ button {
   text-wrap: balance;
 }
 
+.customers-section {
+  position: relative;
+  padding: 104px 0;
+  background:
+    linear-gradient(180deg, rgba(247, 250, 254, 0.98), rgba(255, 255, 255, 0.96));
+}
+
+.customers-section::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 64, 152, 0.2), transparent);
+}
+
+.customers-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+
+.customers-heading {
+  margin: 0;
+}
+
+.customer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.customer-card {
+  min-height: 360px;
+  display: grid;
+  grid-template-rows: 168px 1fr;
+  border: 1px solid rgba(0, 64, 152, 0.12);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.customer-logo-frame {
+  display: grid;
+  place-items: center;
+  min-height: 168px;
+  padding: 30px;
+  border-bottom: 1px solid rgba(0, 64, 152, 0.1);
+  background:
+    linear-gradient(180deg, rgba(249, 251, 254, 0.96), rgba(239, 245, 252, 0.96));
+}
+
+.customer-logo-frame img {
+  display: block;
+  width: min(100%, 280px);
+  max-height: 96px;
+  object-fit: contain;
+}
+
+.customer-copy {
+  padding: 26px 28px 30px;
+}
+
+.customer-label {
+  margin: 0 0 12px;
+  color: var(--brand-red);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.customer-copy h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1.28;
+}
+
+.customer-copy p:last-child {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
 .cta-section {
   padding: 104px 0;
   background:
@@ -802,6 +885,7 @@ body.nav-open {
   .hero-inner,
   .interface-section,
   .governance-section,
+  .customers-layout,
   .cta-layout,
   .intro-grid {
     grid-template-columns: 1fr;
@@ -917,6 +1001,10 @@ body.nav-open {
   .honor-core {
     width: min(34%, 154px);
   }
+
+  .customer-card {
+    grid-template-rows: 150px 1fr;
+  }
 }
 
 @media (max-width: 680px) {
@@ -987,6 +1075,7 @@ body.nav-open {
   .scenario-section,
   .governance-section,
   .honors-section,
+  .customers-section,
   .cta-section {
     padding-top: 74px;
     padding-bottom: 74px;
@@ -1001,10 +1090,30 @@ body.nav-open {
   .advantage-card,
   .scenario-item,
   .interface-figure,
+  .customer-copy,
   .cta-copy,
   .qr-panel {
     min-height: auto;
     padding: 24px;
+  }
+
+  .customer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-card {
+    min-height: auto;
+    grid-template-rows: 132px auto;
+  }
+
+  .customer-logo-frame {
+    min-height: 132px;
+    padding: 22px;
+  }
+
+  .customer-logo-frame img {
+    width: min(100%, 250px);
+    max-height: 78px;
   }
 
   .governance-row {

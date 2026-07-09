@@ -40,6 +40,17 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.18 }
 );
 
+const revealVisibleItems = () => {
+  revealItems.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      item.classList.add("is-visible");
+      revealObserver.unobserve(item);
+    }
+  });
+};
+
 revealItems.forEach((item, index) => {
   item.style.transitionDelay = `${Math.min(index * 45, 180)}ms`;
   revealObserver.observe(item);
@@ -58,5 +69,10 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("scroll", syncHeader, { passive: true });
+window.addEventListener("load", revealVisibleItems);
+window.addEventListener("hashchange", () => {
+  window.setTimeout(revealVisibleItems, 120);
+});
 
 syncHeader();
+revealVisibleItems();
