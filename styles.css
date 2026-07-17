@@ -312,11 +312,16 @@ button {
   isolation: isolate;
 }
 
-.hero-metric-fallback {
-  color: var(--white);
+.hero-metric-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--white);
+  pointer-events: none;
 }
 
-.hero-metric-title.is-playing .hero-metric-fallback {
+.hero-metric-fallback {
   color: transparent;
 }
 
@@ -331,17 +336,20 @@ button {
   dynamic-range-limit: no-limit;
 }
 
-.hero-metric-video-reliable {
+.hero-metric-video-reliable,
+.hero-metric-title-reliable::before {
   clip-path: url("#hero-hdr-clip-reliable");
   -webkit-clip-path: url("#hero-hdr-clip-reliable");
 }
 
-.hero-metric-video-governable {
+.hero-metric-video-governable,
+.hero-metric-title-governable::before {
   clip-path: url("#hero-hdr-clip-governable");
   -webkit-clip-path: url("#hero-hdr-clip-governable");
 }
 
-.hero-metric-video-reusable {
+.hero-metric-video-reusable,
+.hero-metric-title-reusable::before {
   clip-path: url("#hero-hdr-clip-reusable");
   -webkit-clip-path: url("#hero-hdr-clip-reusable");
 }
@@ -931,7 +939,11 @@ body.nav-open {
     display: none;
   }
 
-  .hero-metric-title.is-playing .hero-metric-fallback {
+  .hero-metric-title::before {
+    display: none;
+  }
+
+  .hero-metric-fallback {
     color: CanvasText;
   }
 }

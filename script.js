@@ -65,9 +65,7 @@ navLinks.forEach((link) => {
 });
 
 hdrWordVideos.forEach((video) => {
-  const title = video.closest(".hero-metric-title");
-
-  if (!title || reducedMotionQuery.matches) {
+  if (reducedMotionQuery.matches) {
     video.pause();
     return;
   }
@@ -80,19 +78,9 @@ hdrWordVideos.forEach((video) => {
     }
 
     window.setTimeout(() => {
-      video.play().catch(() => {
-        title.classList.remove("is-playing");
-      });
+      video.play().catch(() => {});
     }, Math.max(0, delay) * 1000);
   };
-
-  video.addEventListener("playing", () => {
-    title.classList.add("is-playing");
-  });
-
-  video.addEventListener("error", () => {
-    title.classList.remove("is-playing");
-  });
 
   if (video.readyState >= HTMLMediaElement.HAVE_METADATA) {
     startPlayback();
