@@ -217,6 +217,14 @@ button {
     linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.62));
 }
 
+.hero-hdr-clips {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 .hero-inner {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
@@ -292,8 +300,50 @@ button {
 }
 
 .hero-metrics dt {
-  font-size: 24px;
+  font-size: clamp(29px, 3vw, 38px);
   font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+}
+
+.hero-metric-title {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.hero-metric-fallback {
+  color: var(--white);
+}
+
+.hero-metric-title.is-playing .hero-metric-fallback {
+  color: transparent;
+}
+
+.hero-metric-video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  dynamic-range-limit: no-limit;
+}
+
+.hero-metric-video-reliable {
+  clip-path: url("#hero-hdr-clip-reliable");
+  -webkit-clip-path: url("#hero-hdr-clip-reliable");
+}
+
+.hero-metric-video-governable {
+  clip-path: url("#hero-hdr-clip-governable");
+  -webkit-clip-path: url("#hero-hdr-clip-governable");
+}
+
+.hero-metric-video-reusable {
+  clip-path: url("#hero-hdr-clip-reusable");
+  -webkit-clip-path: url("#hero-hdr-clip-reusable");
 }
 
 .hero-metrics dd {
@@ -869,6 +919,20 @@ body.nav-open {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .hero-metric-video {
+    display: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .hero-metric-video {
+    display: none;
+  }
+
+  .hero-metric-title.is-playing .hero-metric-fallback {
+    color: CanvasText;
   }
 }
 

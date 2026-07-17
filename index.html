@@ -83,6 +83,19 @@
       <section class="hero" aria-labelledby="hero-title">
         <img class="hero-media" src="assets/weimates-hero.png" alt="企业级 AI 数字员工指挥中心视觉">
         <div class="hero-overlay" aria-hidden="true"></div>
+        <svg class="hero-hdr-clips" aria-hidden="true" focusable="false">
+          <defs>
+            <clipPath id="hero-hdr-clip-reliable" clipPathUnits="objectBoundingBox">
+              <text x="0.03" y="0.82" textLength="0.94" lengthAdjust="spacingAndGlyphs" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="0.82" font-weight="850">可靠</text>
+            </clipPath>
+            <clipPath id="hero-hdr-clip-governable" clipPathUnits="objectBoundingBox">
+              <text x="0.03" y="0.82" textLength="0.94" lengthAdjust="spacingAndGlyphs" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="0.82" font-weight="850">可治理</text>
+            </clipPath>
+            <clipPath id="hero-hdr-clip-reusable" clipPathUnits="objectBoundingBox">
+              <text x="0.03" y="0.82" textLength="0.94" lengthAdjust="spacingAndGlyphs" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="0.82" font-weight="850">可沉淀</text>
+            </clipPath>
+          </defs>
+        </svg>
         <div class="hero-inner">
           <div class="hero-copy">
             <p class="section-kicker reveal">企业级数字员工平台</p>
@@ -96,15 +109,39 @@
           </div>
           <dl class="hero-metrics reveal" aria-label="平台价值">
             <div>
-              <dt>可靠</dt>
+              <dt>
+                <span class="hero-metric-title">
+                  <span class="hero-metric-fallback">可靠</span>
+                  <video class="hero-metric-video hero-metric-video-reliable" muted loop playsinline preload="auto" aria-hidden="true" data-hdr-word-video data-delay="0">
+                    <source src="assets/weimates-hdr-light-sweep-hevc.mp4?v=2" type='video/mp4; codecs="hvc1"'>
+                    <source src="assets/weimates-hdr-light-sweep-vp9.webm?v=2" type='video/webm; codecs="vp09.02.10.10.01.09.16.09.01"'>
+                  </video>
+                </span>
+              </dt>
               <dd>每个数字员工都整体隔离，关键操作受到严格约束</dd>
             </div>
             <div>
-              <dt>可治理</dt>
+              <dt>
+                <span class="hero-metric-title">
+                  <span class="hero-metric-fallback">可治理</span>
+                  <video class="hero-metric-video hero-metric-video-governable" muted loop playsinline preload="auto" aria-hidden="true" data-hdr-word-video data-delay="1.2">
+                    <source src="assets/weimates-hdr-light-sweep-hevc.mp4?v=2" type='video/mp4; codecs="hvc1"'>
+                    <source src="assets/weimates-hdr-light-sweep-vp9.webm?v=2" type='video/webm; codecs="vp09.02.10.10.01.09.16.09.01"'>
+                  </video>
+                </span>
+              </dt>
               <dd>技能、知识、流程与权限策略统一管理，所有操作可追踪、可审计</dd>
             </div>
             <div>
-              <dt>可沉淀</dt>
+              <dt>
+                <span class="hero-metric-title">
+                  <span class="hero-metric-fallback">可沉淀</span>
+                  <video class="hero-metric-video hero-metric-video-reusable" muted loop playsinline preload="auto" aria-hidden="true" data-hdr-word-video data-delay="2.4">
+                    <source src="assets/weimates-hdr-light-sweep-hevc.mp4?v=2" type='video/mp4; codecs="hvc1"'>
+                    <source src="assets/weimates-hdr-light-sweep-vp9.webm?v=2" type='video/webm; codecs="vp09.02.10.10.01.09.16.09.01"'>
+                  </video>
+                </span>
+              </dt>
               <dd>验证有效的动态流程可持续复用，持续放大组织效率与业务价值</dd>
             </div>
           </dl>
@@ -348,6 +385,6 @@
       <a href="mailto:contact@weimates.ai">contact@weimates.ai</a>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>
