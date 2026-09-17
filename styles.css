@@ -239,19 +239,7 @@ button {
   max-width: 900px;
 }
 
-.hero h1 {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(48px, 6.2vw, 78px);
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-}
-
-.hero-title-line {
-  display: block;
-}
-
-.hero-title-nowrap {
+.text-nowrap {
   white-space: nowrap;
 }
 
@@ -275,13 +263,6 @@ button {
   border-color: var(--brand-red);
   color: var(--white);
   box-shadow: 0 16px 40px rgba(230, 0, 18, 0.28);
-}
-
-.button.secondary {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.32);
-  color: var(--white);
-  backdrop-filter: blur(14px);
 }
 
 .button.large {
@@ -378,6 +359,40 @@ button {
   gap: clamp(28px, 5vw, 68px);
   align-items: start;
   padding: 86px 0 82px;
+}
+
+.intro-video {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  padding: 10px;
+  border: 1px solid rgba(0, 64, 152, 0.12);
+  background: var(--brand-blue-deep);
+  box-shadow: 0 24px 64px rgba(6, 30, 70, 0.22), 0 3px 12px rgba(6, 30, 70, 0.12);
+}
+
+.intro-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.intro-video figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 10px 5px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.intro-video figcaption span:last-child {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 .section-title {
@@ -949,7 +964,6 @@ body.nav-open {
 }
 
 @media (max-width: 1100px) {
-  .hero-inner,
   .interface-section,
   .governance-section,
   .customers-layout,
@@ -1044,9 +1058,6 @@ body.nav-open {
     min-height: 310px;
     grid-column: auto;
     justify-self: stretch;
-  }
-
-  .honor-medallion {
     padding: 8px 10px;
   }
 
@@ -1072,6 +1083,10 @@ body.nav-open {
     width: 156px;
   }
 
+  .interface-intro .text-nowrap {
+    white-space: normal;
+  }
+
   .nav-toggle {
     padding-inline: 12px;
   }
@@ -1094,14 +1109,6 @@ body.nav-open {
     width: calc(100% - 32px);
     padding: 102px 0 30px;
     gap: 18px;
-  }
-
-  .hero h1 {
-    font-size: clamp(34px, 10.5vw, 48px);
-  }
-
-  .hero-title-line {
-    display: inline;
   }
 
   .hero-subtitle {
@@ -1145,6 +1152,12 @@ body.nav-open {
     margin-top: 0;
     margin-bottom: 0;
     padding: 74px 0;
+  }
+
+  .intro-video figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
   }
 
   .advantage-card,
