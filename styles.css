@@ -42,7 +42,7 @@ button {
   inset: 0 0 auto;
   z-index: 30;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 18px;
   padding: 18px clamp(20px, 4vw, 56px);
@@ -74,6 +74,35 @@ button {
   display: block;
   width: clamp(168px, 17vw, 236px);
   height: auto;
+}
+
+.header-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.header-brand .brand-logo {
+  width: clamp(168px, 14vw, 200px);
+}
+
+.header-brand-divider {
+  width: 1px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.product-brand {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.product-brand:hover,
+.product-brand:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .nav-toggle {
@@ -128,7 +157,7 @@ button {
 .nav-panel {
   display: flex;
   align-items: center;
-  justify-self: center;
+  justify-self: end;
   gap: clamp(14px, 2vw, 26px);
   padding: 12px 18px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -993,7 +1022,7 @@ body.nav-open {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .site-header {
     grid-template-columns: auto auto;
     justify-content: space-between;
@@ -1042,7 +1071,9 @@ body.nav-open {
     pointer-events: auto;
     transform: translateY(0);
   }
+}
 
+@media (max-width: 900px) {
   .hero {
     min-height: auto;
   }
@@ -1084,6 +1115,10 @@ body.nav-open {
 
   .brand-logo {
     width: 156px;
+  }
+
+  .product-brand-description {
+    display: none;
   }
 
   .interface-intro .text-nowrap {
@@ -1222,5 +1257,24 @@ body.nav-open {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    gap: 10px;
+    padding-inline: 12px;
+  }
+
+  .header-brand {
+    gap: 8px;
+  }
+
+  .header-brand .brand-logo {
+    width: 130px;
+  }
+
+  .product-brand {
+    font-size: 13px;
   }
 }
