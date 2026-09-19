@@ -558,7 +558,6 @@ button {
 }
 
 .advantage-card {
-  min-height: 280px;
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   color: var(--ink);
@@ -611,7 +610,6 @@ button {
 }
 
 .scenario-item {
-  min-height: 260px;
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background:
