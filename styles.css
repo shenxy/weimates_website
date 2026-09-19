@@ -485,13 +485,13 @@ button {
 }
 
 .interface-points {
+  display: grid;
+  gap: 28px;
   margin-top: 0;
-  border-top: 1px solid rgba(0, 64, 152, 0.12);
 }
 
 .interface-points div {
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(0, 64, 152, 0.12);
+  padding: 4px 0;
 }
 
 .interface-points strong,
@@ -500,6 +500,7 @@ button {
 }
 
 .interface-points strong {
+  color: var(--brand-red);
   font-size: 18px;
 }
 
@@ -568,11 +569,11 @@ button {
   box-shadow: 0 18px 44px rgba(2, 17, 39, 0.2);
 }
 
-.card-index {
-  color: var(--brand-red);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 36px;
-  line-height: 1;
+.card-mark {
+  display: block;
+  width: 46px;
+  height: 4px;
+  background: var(--brand-red);
 }
 
 .advantage-card h3,
@@ -846,14 +847,6 @@ button {
   padding: 26px 28px 30px;
 }
 
-.customer-label {
-  margin: 0 0 12px;
-  color: var(--brand-red);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
 .customer-copy h3 {
   margin: 0;
   color: var(--ink);
@@ -1024,6 +1017,20 @@ body.nav-open {
 
   .interface-intro {
     grid-template-columns: 1fr;
+  }
+
+  .intro-grid,
+  .interface-intro {
+    row-gap: 0;
+  }
+
+  .intro-grid .section-title,
+  .interface-intro .section-title {
+    margin-bottom: 18px;
+  }
+
+  .intro-grid .intro-video {
+    margin-top: 44px;
   }
 
   .advantages-grid {
