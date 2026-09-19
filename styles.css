@@ -176,25 +176,6 @@ button {
   opacity: 1;
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0 20px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  font-size: 14px;
-  font-weight: 700;
-  white-space: nowrap;
-  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
-}
-
-.button:hover,
-.button:focus-visible {
-  transform: translateY(-2px);
-}
-
 .site-header.is-solid .nav-panel {
   border-color: rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
@@ -221,7 +202,7 @@ button {
 
 .hero {
   position: relative;
-  min-height: 94vh;
+  min-height: min(94vh, 800px);
   overflow: hidden;
   color: var(--white);
   isolation: isolate;
@@ -278,26 +259,6 @@ button {
   color: rgba(255, 255, 255, 0.84);
   font-size: clamp(18px, 2.3vw, 24px);
   line-height: 1.72;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 34px;
-}
-
-.button.primary {
-  background: var(--brand-red);
-  border-color: var(--brand-red);
-  color: var(--white);
-  box-shadow: 0 16px 40px rgba(230, 0, 18, 0.28);
-}
-
-.button.large {
-  min-height: 52px;
-  padding-inline: 26px;
-  font-size: 15px;
 }
 
 .hero-metrics {
@@ -442,10 +403,10 @@ button {
 
 .section-heading .section-title,
 .governance-copy .section-title,
-.cta-copy .section-title,
+.contact-copy .section-title,
 .section-heading .section-lead,
 .governance-copy .section-lead,
-.cta-copy .section-lead {
+.contact-copy .section-lead {
   max-width: 860px;
 }
 
@@ -571,8 +532,7 @@ button {
 }
 
 .advantage-card h3,
-.scenario-item h3,
-.qr-heading h3 {
+.scenario-item h3 {
   margin: 28px 0 14px;
   font-size: 24px;
   line-height: 1.4;
@@ -861,43 +821,49 @@ button {
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(240, 245, 252, 0.96));
 }
 
-.cta-layout {
+.contact-panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
-  gap: 24px;
-  align-items: stretch;
-}
-
-.cta-copy,
-.qr-panel {
-  padding: 34px;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  padding: clamp(32px, 5vw, 56px);
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.92);
   box-shadow: var(--shadow);
 }
 
-.cta-copy .section-lead {
+.contact-copy .section-lead {
   margin-top: 22px;
 }
 
-.qr-heading h3 {
-  margin: 0;
-  color: var(--ink);
-  font-size: 28px;
-  line-height: 1.45;
+.contact-email {
+  display: inline-grid;
+  gap: 2px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
 }
 
-.cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 30px;
+.contact-email span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.contact-email strong {
+  color: var(--brand-blue);
+  font-size: clamp(19px, 2vw, 24px);
+  line-height: 1.35;
+}
+
+.contact-email:hover strong,
+.contact-email:focus-visible strong {
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .qr-grid {
   display: grid;
   gap: 16px;
-  margin-top: 24px;
 }
 
 .qr-card {
@@ -999,7 +965,7 @@ body.nav-open {
   .interface-section,
   .governance-section,
   .customers-layout,
-  .cta-layout,
+  .contact-panel,
   .intro-grid {
     grid-template-columns: 1fr;
   }
@@ -1154,12 +1120,6 @@ body.nav-open {
     line-height: 1.68;
   }
 
-  .hero-actions,
-  .cta-actions,
-  .button {
-    width: 100%;
-  }
-
   .hero-metrics,
   .advantages-grid,
   .scenario-grid {
@@ -1206,8 +1166,7 @@ body.nav-open {
   .scenario-item,
   .interface-figure,
   .customer-copy,
-  .cta-copy,
-  .qr-panel {
+  .contact-panel {
     min-height: auto;
     padding: 24px;
   }
