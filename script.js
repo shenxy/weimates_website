@@ -30,17 +30,37 @@ const toggleNav = () => {
   header?.classList.toggle("is-solid-locked", isOpen);
 };
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
+let revealObserver = null;
+
+const initReveal = () => {
+  if (reducedMotionQuery.matches || !("IntersectionObserver" in window)) {
+    return;
+  }
+
+  try {
+    revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+
+    revealItems.forEach((item, index) => {
+      item.style.transitionDelay = `${Math.min(index * 45, 180)}ms`;
+      revealObserver.observe(item);
+      item.classList.add("is-pending");
     });
-  },
-  { threshold: 0.18 }
-);
+  } catch {
+    revealObserver?.disconnect();
+    revealObserver = null;
+    revealItems.forEach((item) => item.classList.remove("is-pending"));
+  }
+};
 
 const revealVisibleItems = () => {
   revealItems.forEach((item) => {
@@ -48,15 +68,10 @@ const revealVisibleItems = () => {
 
     if (rect.top < window.innerHeight && rect.bottom > 0) {
       item.classList.add("is-visible");
-      revealObserver.unobserve(item);
+      revealObserver?.unobserve(item);
     }
   });
 };
-
-revealItems.forEach((item, index) => {
-  item.style.transitionDelay = `${Math.min(index * 45, 180)}ms`;
-  revealObserver.observe(item);
-});
 
 navToggle?.addEventListener("click", toggleNav);
 
@@ -102,4 +117,5 @@ window.addEventListener("hashchange", () => {
 });
 
 syncHeader();
+initReveal();
 revealVisibleItems();
